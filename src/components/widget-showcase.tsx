@@ -9,6 +9,7 @@ import {
 } from "@phosphor-icons/react/dist/ssr";
 import { useMemo } from "react";
 import clsx from "clsx";
+import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
 
 const cards = [
   {
@@ -116,65 +117,61 @@ export function WidgetShowcase() {
               >
                 {item.label}
               </motion.span>
-            ))}
-          </div>
-        </div>
+        ))}
+      </div>
+    </div>
 
         <div className="relative flex-1">
-          <div className="grid gap-6 md:grid-cols-3">
+          <BentoGrid>
             {cards.map((card, index) => {
               const Icon = card.icon;
               return (
-                <motion.article
+                <motion.div
                   key={card.title}
                   custom={index}
                   variants={cardVariants}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{ once: true, amount: 0.6 }}
-                  className={clsx(
-                    "group relative overflow-hidden rounded-[28px] border border-outline/30 bg-surface/90 p-5 shadow-lg backdrop-blur-xl",
-                    index === 1 ? "md:translate-y-8" : "md:translate-y-0",
-                    index === 2 ? "md:translate-y-16" : "",
-                  )}
-                  data-cursor-target
-                  data-cursor-text={`${card.title} •`}
-                  data-cursor-padding="120"
-                  whileHover={{
-                    y: index === 0 ? -12 : index === 1 ? -20 : -16,
-                    scale: 1.03,
-                    transition: { duration: 0.4, ease: "easeOut" },
-                  }}
                 >
-                  <span
-                    className={clsx(
-                      "absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100",
-                      "bg-gradient-to-br",
-                      card.accent,
-                    )}
+                  <BentoGridItem
+                    title={card.title}
+                    description={card.description}
+                    icon={<Icon size={26} weight="duotone" />}
+                    accent={
+                      <span className="inline-flex w-fit items-center gap-2 rounded-full border border-outline/40 bg-surface/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-foreground/60 shadow-inner-strong">
+                        Odyssey Flow
+                      </span>
+                    }
+                    header={
+                      <div className="relative flex h-full flex-col gap-4 rounded-2xl border border-outline/30 bg-surface/90 p-4 shadow-inner-strong backdrop-blur-md">
+                        <div
+                          className={clsx(
+                            "pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-500 group-hover:opacity-100",
+                            "bg-gradient-to-br",
+                            card.accent,
+                          )}
+                        />
+                        <div className="relative flex flex-col gap-3 text-xs text-foreground/70">
+                          <p>
+                            {index === 0 &&
+                              "Timeline segments choreograph context shifts with motion-tracked scene anchors."}
+                            {index === 1 &&
+                              "Scroll velocity modulates depth, lens blur, and gradient bloom for tactile depth."}
+                            {index === 2 &&
+                              "Gesture-driven states snap using Impeller physics, complete with haptics hooks."}
+                          </p>
+                          <p className="text-[11px] uppercase tracking-[0.3em] text-foreground/45">
+                            Hover to ignite parallax aura
+                          </p>
+                        </div>
+                      </div>
+                    }
                   />
-                  <div className="relative z-10 space-y-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-surface/90 shadow-inner-strong backdrop-blur">
-                      <Icon size={26} weight="duotone" className="text-accent" />
-                    </div>
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {card.title}
-                    </h3>
-                    <p className="text-sm text-foreground/65">{card.description}</p>
-                  </div>
-                  <motion.div
-                    aria-hidden
-                    className="absolute -right-6 -top-6 h-24 w-24 rounded-full bg-white/25 blur-3xl dark:bg-white/10"
-                    animate={{
-                      scale: [1, 1.1, 1],
-                      opacity: [0.3, 0.5, 0.3],
-                    }}
-                    transition={{ duration: 6, repeat: Infinity }}
-                  />
-                </motion.article>
+                </motion.div>
               );
             })}
-          </div>
+          </BentoGrid>
         </div>
       </div>
     </section>

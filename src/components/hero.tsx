@@ -8,6 +8,7 @@ import {
   useTransform,
 } from "framer-motion";
 import { Cube, Sparkle, WaveSine, WifiHigh } from "@phosphor-icons/react/dist/ssr";
+import { Spotlight } from "@/components/ui/spotlight";
 
 const featureChips = [
   { label: "Adaptive Layouts", icon: Cube },
@@ -38,16 +39,22 @@ export function Hero() {
         style={{ y: parallaxThree }}
       />
       <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="space-y-10">
-          <motion.div
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, ease: "easeOut" }}
-            className="inline-flex items-center gap-3 rounded-full border border-outline/50 bg-surface/80 px-5 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-foreground/70 shadow-inner-strong backdrop-blur-md"
-          >
-            <Sparkle weight="duotone" className="text-accent" size={20} />
-            interactive Flutter widget
-          </motion.div>
+        <div className="group relative space-y-10 overflow-hidden rounded-[44px] border border-outline/20 bg-surface/70 p-10 shadow-[0_40px_120px_rgba(10,14,32,0.24)] backdrop-blur-xl">
+          <Spotlight
+            className="hidden md:block"
+            size={560}
+            fill="rgba(var(--glow-rgb),0.32)"
+          />
+          <div className="relative space-y-10">
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+              className="inline-flex items-center gap-3 rounded-full border border-outline/50 bg-surface/80 px-5 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-foreground/70 shadow-inner-strong backdrop-blur-md"
+            >
+              <Sparkle weight="duotone" className="text-accent" size={20} />
+              interactive Flutter widget
+            </motion.div>
 
           <motion.h1
             initial={{ opacity: 0, y: 60 }}
@@ -116,6 +123,7 @@ export function Hero() {
               Peek at the code
             </a>
           </motion.div>
+          </div>
         </div>
 
         <div className="relative flex justify-center">

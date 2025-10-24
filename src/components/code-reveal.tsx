@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Highlight, themes } from "prism-react-renderer";
 import { useTheme } from "next-themes";
 import { BracketsAngle } from "@phosphor-icons/react/dist/ssr";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const flutterSnippet = `import 'package:flutter/material.dart';
 
@@ -80,6 +81,7 @@ export function CodeReveal() {
       id="code"
       className="relative overflow-hidden rounded-[40px] border border-outline/30 bg-surface/85 p-10 shadow-[0_40px_110px_rgba(10,14,28,0.2)] backdrop-blur-2xl md:p-16"
     >
+      <BackgroundBeams className="-z-10" />
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
         <div className="flex-1 space-y-6">
           <div className="inline-flex items-center gap-2 rounded-full border border-outline/50 bg-surface/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.32em] text-foreground/60 shadow-inner-strong">
