@@ -74,6 +74,9 @@ export function ExperienceLayers() {
               key={title}
               style={{ y: translate }}
               className="group relative overflow-hidden rounded-[32px] border border-outline/25 bg-surface/90 p-8 shadow-[0_30px_80px_rgba(12,16,36,0.14)] backdrop-blur-lg"
+              data-cursor-target
+              data-cursor-text={`${title} •`}
+              data-cursor-padding="120"
             >
               <span className="absolute inset-0 bg-gradient-to-br from-accent/15 via-transparent to-glow/10 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
               <div className="relative flex gap-4">

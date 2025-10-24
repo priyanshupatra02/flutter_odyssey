@@ -98,6 +98,10 @@ export function Hero() {
             <a
               href="#interactions"
               className="group relative flex h-14 items-center gap-3 overflow-hidden rounded-full border border-outline/40 bg-gradient-to-r from-accent/80 via-accent to-accent/80 px-8 text-base font-semibold text-accent-foreground shadow-[0_16px_45px_rgba(var(--glow-rgb),0.38)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_20px_60px_rgba(var(--glow-rgb),0.45)]"
+              data-cursor-target
+              data-cursor-text="Dive in •"
+              data-cursor-padding="110"
+              data-cursor-tone="dark"
             >
               <span className="absolute inset-0 translate-x-[-120%] bg-white/40 transition-transform duration-[900ms] ease-out group-hover:translate-x-[120%]" />
               Dive into Interactions
@@ -105,6 +109,9 @@ export function Hero() {
             <a
               href="#code"
               className="flex h-14 items-center gap-3 rounded-full border border-outline/50 bg-surface/70 px-8 text-base font-semibold text-foreground/80 transition-colors hover:border-outline/80 hover:text-foreground"
+              data-cursor-target
+              data-cursor-text="Peek •"
+              data-cursor-padding="100"
             >
               Peek at the code
             </a>

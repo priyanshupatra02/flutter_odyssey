@@ -23,6 +23,9 @@ export function Navbar() {
       <Link
         href="#"
         className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.32em] text-foreground/70 transition-colors hover:text-foreground"
+        data-cursor-target
+        data-cursor-text="Navigate •"
+        data-cursor-padding="72"
       >
         <span className="grid h-10 w-10 place-items-center rounded-full bg-accent/20">
           <Planet size={22} weight="duotone" className="text-accent" />
@@ -37,6 +40,9 @@ export function Navbar() {
               href={link.href}
               whileHover={{ y: -3 }}
               className="relative px-1 py-1 transition-colors hover:text-foreground"
+              data-cursor-target
+              data-cursor-text={`${link.label} •`}
+              data-cursor-padding="60"
             >
               {link.label}
               <motion.span
@@ -53,6 +59,10 @@ export function Navbar() {
         <Link
           href="#experience"
           className="group relative hidden h-11 items-center gap-2 overflow-hidden rounded-full border border-outline/40 bg-gradient-to-r from-accent/80 via-accent to-accent/80 px-5 text-sm font-semibold text-accent-foreground shadow-[0_10px_40px_rgba(var(--glow-rgb),0.35)] transition-all duration-500 hover:scale-[1.02] hover:shadow-[0_12px_50px_rgba(var(--glow-rgb),0.45)] md:flex"
+          data-cursor-target
+          data-cursor-text="Experience •"
+          data-cursor-padding="90"
+          data-cursor-tone="dark"
         >
           <span className="absolute inset-0 -translate-x-full bg-white/40 transition-transform duration-700 group-hover:translate-x-full" />
           <Lightning size={20} weight="duotone" className="relative" />
@@ -61,6 +71,9 @@ export function Navbar() {
         <Link
           href="#code"
           className="flex h-11 items-center gap-2 rounded-full border border-outline/40 bg-surface/80 px-4 text-sm font-semibold text-foreground/80 transition-colors hover:border-outline/70 hover:text-foreground"
+          data-cursor-target
+          data-cursor-text="Reveal •"
+          data-cursor-padding="70"
         >
           <Code size={20} weight="duotone" className="text-accent" />
           <span className="hidden sm:inline">Reveal Code</span>

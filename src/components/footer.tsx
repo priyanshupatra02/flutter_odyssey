@@ -45,6 +45,10 @@ export function Footer() {
           <a
             href="mailto:hello@flutterodyssey.dev"
             className="inline-flex h-14 items-center justify-center rounded-full border border-outline/40 bg-gradient-to-r from-accent/80 via-accent to-accent/70 px-8 font-semibold text-accent-foreground shadow-[0_12px_40px_rgba(var(--glow-rgb),0.42)] transition-transform hover:-translate-y-1"
+            data-cursor-target
+            data-cursor-text="Email •"
+            data-cursor-padding="120"
+            data-cursor-tone="dark"
           >
             hello@flutterodyssey.dev
           </a>
@@ -57,6 +61,9 @@ export function Footer() {
                 rel="noreferrer"
                 whileHover={{ y: -4 }}
                 className="inline-flex h-12 w-12 items-center justify-center rounded-full border border-outline/35 bg-surface/80 text-accent transition-colors hover:border-outline/70"
+                data-cursor-target
+                data-cursor-text={`${label} •`}
+                data-cursor-padding="90"
               >
                 <Icon size={26} weight="duotone" />
               </motion.a>
@@ -71,4 +78,3 @@ export function Footer() {
     </footer>
   );
 }
-

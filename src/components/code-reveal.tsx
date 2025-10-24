@@ -100,6 +100,10 @@ export function CodeReveal() {
             whileTap={{ scale: 0.97 }}
             onClick={() => setIsOpen((prev) => !prev)}
             className="group relative inline-flex h-16 items-center justify-center overflow-hidden rounded-full border border-accent/40 bg-gradient-to-r from-accent via-glow to-accent px-10 text-lg font-semibold text-accent-foreground shadow-[0_18px_60px_rgba(var(--glow-rgb),0.55)] transition-shadow duration-500"
+            data-cursor-target
+            data-cursor-text={isOpen ? "Hide •" : "Reveal •"}
+            data-cursor-padding="140"
+            data-cursor-tone="dark"
           >
             <span className="absolute inset-0 animate-pulse-glow" />
             <span className="absolute inset-0 translate-x-[-120%] bg-white/45 transition-transform duration-700 group-hover:translate-x-[120%]" />

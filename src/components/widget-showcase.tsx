@@ -137,6 +137,9 @@ export function WidgetShowcase() {
                     index === 1 ? "md:translate-y-8" : "md:translate-y-0",
                     index === 2 ? "md:translate-y-16" : "",
                   )}
+                  data-cursor-target
+                  data-cursor-text={`${card.title} •`}
+                  data-cursor-padding="120"
                   whileHover={{
                     y: index === 0 ? -12 : index === 1 ? -20 : -16,
                     scale: 1.03,
