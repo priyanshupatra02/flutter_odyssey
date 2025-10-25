@@ -88,15 +88,15 @@ export function WidgetShowcase() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-120px" }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="inline-flex items-center gap-2 rounded-full border border-outline/50 bg-surface/80 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.38em] text-foreground/60 shadow-inner-strong"
+            className="eyebrow-pill bg-surface/70 px-4 py-2 text-foreground/65"
           >
             <DropHalf weight="duotone" className="text-accent" size={18} />
             Showcase
           </motion.div>
-          <h2 className="text-3xl font-semibold tracking-tight text-foreground md:text-4xl">
+          <h2 className="heading-lg text-foreground">
             Every interaction feels choreographed.
           </h2>
-          <p className="text-base text-foreground/70 md:text-lg">
+          <p className="copy-lg text-foreground/70">
             Animate between widget states, sync with live data, and choreograph
             motion using Flutter&apos;s Impeller renderer. These patterns are
             built with production-ready architecture and maintainable state
@@ -110,15 +110,12 @@ export function WidgetShowcase() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-100px" }}
                 transition={{ duration: 0.6, ease: "easeOut", delay: item.delay }}
-                className={clsx(
-                  "rounded-full border border-outline/30 px-4 py-2 shadow-inner-strong",
-                  item.color,
-                )}
+                className={clsx("label-sm rounded-full border border-outline/30 px-4 py-2 shadow-inner-strong", item.color)}
               >
                 {item.label}
               </motion.span>
-        ))}
-      </div>
+            ))}
+          </div>
     </div>
 
         <div className="relative flex-1">
@@ -139,7 +136,7 @@ export function WidgetShowcase() {
                     description={card.description}
                     icon={<Icon size={26} weight="duotone" />}
                     accent={
-                      <span className="inline-flex w-fit items-center gap-2 rounded-full border border-outline/40 bg-surface/80 px-3 py-1 text-xs font-semibold uppercase tracking-[0.28em] text-foreground/60 shadow-inner-strong">
+                      <span className="eyebrow-pill bg-surface/70 px-3 py-1.5 text-foreground/65">
                         Odyssey Flow
                       </span>
                     }
@@ -152,8 +149,8 @@ export function WidgetShowcase() {
                             card.accent,
                           )}
                         />
-                        <div className="relative flex flex-col gap-3 text-xs text-foreground/70">
-                          <p>
+                        <div className="relative flex flex-col gap-3 text-foreground/70">
+                          <p className="copy-md text-foreground/70">
                             {index === 0 &&
                               "Timeline segments choreograph context shifts with motion-tracked scene anchors."}
                             {index === 1 &&
@@ -161,7 +158,7 @@ export function WidgetShowcase() {
                             {index === 2 &&
                               "Gesture-driven states snap using Impeller physics, complete with haptics hooks."}
                           </p>
-                          <p className="text-[11px] uppercase tracking-[0.3em] text-foreground/45">
+                          <p className="label-sm text-foreground/50">
                             Hover to ignite parallax aura
                           </p>
                         </div>

@@ -47,20 +47,20 @@ export function ExperienceLayers() {
       id="experience-layers"
       className="relative mx-auto mt-24 grid max-w-6xl gap-8 lg:grid-cols-[0.75fr_1fr]"
     >
-      <div className="space-y-5">
+      <div className="space-y-6">
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.6 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
-          className="inline-flex items-center gap-2 rounded-full border border-outline/40 bg-surface/70 px-4 py-2 text-xs font-semibold uppercase tracking-[0.35em] text-foreground/55"
+          className="eyebrow-pill px-4 py-2 text-foreground/65"
         >
           Layers of polish
         </motion.p>
-        <h2 className="text-3xl font-semibold text-foreground md:text-4xl">
+        <h2 className="heading-lg text-foreground">
           Layers that elevate the widget beyond a prototype.
         </h2>
-        <p className="text-base text-foreground/70 md:text-lg">
+        <p className="copy-lg text-foreground/70">
           Each module of Odyssey has been engineered to thrill users while being
           maintainable for teams. Scroll to feel how the presentation layers
           react to your momentum.
@@ -84,10 +84,10 @@ export function ExperienceLayers() {
                   <Icon size={26} weight="duotone" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-foreground">
+                  <h3 className="heading-md text-foreground">
                     {title}
                   </h3>
-                  <p className="mt-2 text-sm text-foreground/65 md:text-base">
+                  <p className="copy-md mt-2 text-foreground/65">
                     {description}
                   </p>
                 </div>

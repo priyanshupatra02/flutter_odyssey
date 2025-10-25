@@ -28,14 +28,14 @@ export function Footer() {
     >
       <div className="flex flex-col gap-8 md:flex-row md:items-center md:justify-between">
         <div className="space-y-3">
-          <div className="inline-flex items-center gap-2 rounded-full border border-outline/40 bg-surface/60 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.32em] text-foreground/55 shadow-inner-strong">
+          <div className="eyebrow-pill bg-surface/60 px-5 py-2 text-foreground/60">
             <PaperPlaneTilt weight="duotone" className="text-accent" size={20} />
             Let&apos;s talk
           </div>
-          <h3 className="text-2xl font-semibold text-foreground md:text-3xl">
+          <h3 className="heading-md text-foreground">
             Ready to ship Flutter experiences that wow?
           </h3>
-          <p className="max-w-xl text-sm text-foreground/65 md:text-base">
+          <p className="copy-md max-w-xl text-foreground/65">
             Odyssey is the blueprint for your next interactive widget. Reach out
             to collaborate, fork the project, or dive deeper into the motion
             system.
@@ -71,7 +71,7 @@ export function Footer() {
           </div>
         </div>
       </div>
-      <div className="mt-10 flex flex-col gap-2 text-xs text-foreground/50 md:flex-row md:items-center md:justify-between">
+      <div className="copy-md mt-10 flex flex-col gap-2 text-foreground/55 md:flex-row md:items-center md:justify-between">
         <span>© {new Date().getFullYear()} Flutter Odyssey — Crafted for motion-first teams.</span>
         <span>Built with Next.js 16 · Flutter-inspired visuals · Animated by Framer Motion.</span>
       </div>

@@ -52,13 +52,13 @@ export function BentoGridItem({
     >
       <div className="relative z-20 flex flex-col gap-4">
         {accent ?? (
-          <span className="inline-flex w-fit items-center gap-2 rounded-full border border-outline/40 bg-surface/80 px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.32em] text-foreground/55 shadow-inner-strong">
+          <span className="eyebrow-pill bg-surface/70 px-4 py-1.5 text-foreground/60">
             Featured
           </span>
         )}
         <div className="space-y-2">
-          <h3 className="text-xl font-semibold text-foreground">{title}</h3>
-          <p className="text-sm text-foreground/65">{description}</p>
+          <h3 className="heading-md text-foreground">{title}</h3>
+          <p className="copy-md text-foreground/65">{description}</p>
         </div>
       </div>
       <div className="relative z-20 mt-4 flex items-end justify-between gap-4">
@@ -73,4 +73,3 @@ export function BentoGridItem({
     </div>
   );
 }
-

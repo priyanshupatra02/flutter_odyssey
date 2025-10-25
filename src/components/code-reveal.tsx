@@ -84,14 +84,14 @@ export function CodeReveal() {
       <BackgroundBeams className="-z-10" />
       <div className="flex flex-col gap-8 lg:flex-row lg:items-center">
         <div className="flex-1 space-y-6">
-          <div className="inline-flex items-center gap-2 rounded-full border border-outline/50 bg-surface/70 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.32em] text-foreground/60 shadow-inner-strong">
+          <div className="eyebrow-pill bg-surface/70 px-5 py-2 text-foreground/65">
             <BracketsAngle weight="duotone" className="text-accent" size={20} />
             Code reveal
           </div>
-          <h2 className="text-3xl font-semibold text-foreground md:text-4xl">
+          <h2 className="heading-lg text-foreground">
             See the Flutter magic behind the glass.
           </h2>
-          <p className="text-base text-foreground/70 md:text-lg">
+          <p className="copy-lg text-foreground/70">
             Tap the glowing button to unveil the widget source. The snippet
             showcases custom animation controllers, gesture listeners, and
             crafted shadows powering Odyssey&apos;s parallax core.
@@ -164,7 +164,7 @@ export function CodeReveal() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="mt-8 text-sm text-foreground/55 lg:mt-4"
+              className="mt-8 copy-md text-foreground/55 lg:mt-4"
             >
               Hint: Animations orchestrate via `AnimationController`, while the
               parallax feels real thanks to subtle lerp-tuned shadows.

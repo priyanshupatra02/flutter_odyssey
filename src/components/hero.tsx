@@ -16,6 +16,12 @@ const featureChips = [
   { label: "Real-time Sync", icon: WifiHigh },
 ];
 
+const heroMetrics = [
+  { value: "3x", label: "Faster motion sprints" },
+  { value: "24ms", label: "Average frame budget" },
+  { value: "9 platforms", label: "Shipping in sync" },
+];
+
 export function Hero() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
@@ -39,90 +45,107 @@ export function Hero() {
         style={{ y: parallaxThree }}
       />
       <div className="grid items-center gap-16 lg:grid-cols-[1.1fr_0.9fr]">
-        <div className="group relative space-y-10 overflow-hidden rounded-[44px] border border-outline/20 bg-surface/70 p-10 shadow-[0_40px_120px_rgba(10,14,32,0.24)] backdrop-blur-xl">
+        <div className="group relative space-y-12 overflow-hidden surface-card px-10 py-12">
           <Spotlight
             className="hidden md:block"
-            size={560}
-            fill="rgba(var(--glow-rgb),0.32)"
+            size={520}
+            fill="rgba(var(--glow-rgb),0.28)"
           />
           <div className="relative space-y-10">
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
+            <motion.span
+              initial={{ opacity: 0, y: 18 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-              className="inline-flex items-center gap-3 rounded-full border border-outline/50 bg-surface/80 px-5 py-2 text-sm font-semibold uppercase tracking-[0.3em] text-foreground/70 shadow-inner-strong backdrop-blur-md"
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="eyebrow-pill"
             >
               <Sparkle weight="duotone" className="text-accent" size={20} />
-              interactive Flutter widget
-            </motion.div>
+              Flutter Odyssey v2.0
+            </motion.span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-            className="text-balance text-4xl font-semibold leading-tight tracking-tight text-foreground md:text-6xl"
-          >
-            Craft immersive Flutter experiences with cinematic motion and rich
-            parallax storytelling.
-          </motion.h1>
+            <motion.h1
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+              className="heading-hero text-foreground"
+            >
+              Craft immersive Flutter experiences with cinematic motion and rich
+              parallax storytelling.
+            </motion.h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-            className="max-w-xl text-pretty text-lg text-foreground/70 md:text-xl"
-          >
-            Odyssey is an interactive widget journey built in Flutter. Explore
-            how layered animations, tactile gestures, and glassmorphism blend
-            into a delightful cross-platform interface ready for production.
-          </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 60 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+              className="copy-xl max-w-2xl text-foreground/70"
+            >
+              Odyssey is an interactive widget journey built in Flutter. Explore
+              how layered animations, tactile gestures, and glassmorphism blend
+              into a delightful cross-platform interface ready for production.
+            </motion.p>
 
-          <AnimatePresence>
+            <AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0, y: 60 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
+                className="flex flex-wrap items-center gap-3 text-sm font-medium text-foreground/75"
+              >
+                {featureChips.map(({ icon: Icon, label }) => (
+                  <span
+                    key={label}
+                    className="inline-flex items-center gap-2 rounded-full border border-outline/35 bg-surface/70 px-4 py-2 text-foreground/75 shadow-inner-strong backdrop-blur-md"
+                  >
+                    <Icon size={20} weight="duotone" className="text-accent" />
+                    {label}
+                  </span>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+
             <motion.div
               initial={{ opacity: 0, y: 60 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.9, ease: "easeOut", delay: 0.3 }}
-              className="flex flex-wrap items-center gap-4 text-sm font-medium text-foreground/75"
+              transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
+              className="flex flex-wrap items-center gap-4"
             >
-              {featureChips.map(({ icon: Icon, label }) => (
-                <span
-                  key={label}
-                  className="inline-flex items-center gap-2 rounded-full border border-outline/40 bg-surface/70 px-4 py-2 shadow-inner-strong backdrop-blur-md"
+              <a
+                href="#interactions"
+                className="group relative flex h-14 items-center gap-3 overflow-hidden rounded-full border border-outline/40 bg-gradient-to-r from-accent/85 via-accent to-glow/80 px-8 text-base font-semibold text-accent-foreground shadow-[0_16px_58px_rgba(var(--glow-rgb),0.42)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_24px_70px_rgba(var(--glow-rgb),0.5)]"
+                data-cursor-target
+                data-cursor-text="Dive in •"
+                data-cursor-padding="110"
+                data-cursor-tone="dark"
+              >
+                <span className="absolute inset-0 translate-x-[-120%] bg-white/40 transition-transform duration-[900ms] ease-out group-hover:translate-x-[120%]" />
+                Dive into Interactions
+              </a>
+              <a
+                href="#code"
+                className="flex h-14 items-center gap-3 rounded-full border border-outline/50 bg-surface/70 px-8 text-base font-semibold text-foreground/80 transition-colors hover:border-outline/80 hover:text-foreground"
+                data-cursor-target
+                data-cursor-text="Peek •"
+                data-cursor-padding="100"
+              >
+                Peek at the code
+              </a>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, ease: "easeOut", delay: 0.5 }}
+              className="grid gap-6 pt-6 text-foreground/75 sm:grid-cols-3"
+            >
+              {heroMetrics.map((metric) => (
+                <div
+                  key={metric.label}
+                  className="rounded-3xl border border-outline/35 bg-surface/60 px-5 py-4 text-foreground shadow-inner-strong backdrop-blur-lg"
                 >
-                  <Icon size={20} weight="duotone" className="text-accent" />
-                  {label}
-                </span>
+                  <p className="heading-md text-foreground">{metric.value}</p>
+                  <p className="copy-md mt-2 text-foreground/65">{metric.label}</p>
+                </div>
               ))}
             </motion.div>
-          </AnimatePresence>
-
-          <motion.div
-            initial={{ opacity: 0, y: 60 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, ease: "easeOut", delay: 0.4 }}
-            className="flex flex-wrap items-center gap-4"
-          >
-            <a
-              href="#interactions"
-              className="group relative flex h-14 items-center gap-3 overflow-hidden rounded-full border border-outline/40 bg-gradient-to-r from-accent/80 via-accent to-accent/80 px-8 text-base font-semibold text-accent-foreground shadow-[0_16px_45px_rgba(var(--glow-rgb),0.38)] transition-all duration-500 hover:scale-[1.03] hover:shadow-[0_20px_60px_rgba(var(--glow-rgb),0.45)]"
-              data-cursor-target
-              data-cursor-text="Dive in •"
-              data-cursor-padding="110"
-              data-cursor-tone="dark"
-            >
-              <span className="absolute inset-0 translate-x-[-120%] bg-white/40 transition-transform duration-[900ms] ease-out group-hover:translate-x-[120%]" />
-              Dive into Interactions
-            </a>
-            <a
-              href="#code"
-              className="flex h-14 items-center gap-3 rounded-full border border-outline/50 bg-surface/70 px-8 text-base font-semibold text-foreground/80 transition-colors hover:border-outline/80 hover:text-foreground"
-              data-cursor-target
-              data-cursor-text="Peek •"
-              data-cursor-padding="100"
-            >
-              Peek at the code
-            </a>
-          </motion.div>
           </div>
         </div>
 

@@ -168,3 +168,78 @@ body:not(.dark) .floating-cursor-reticle__outline[data-tone="light"] {
 body:not(.dark) .floating-cursor-reticle__text[data-tone="light"] {
   color: rgb(23, 32, 89);
 }
+
+.heading-hero {
+  font-size: clamp(2.9rem, 2.3rem + 2.4vw, 4.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.045em;
+  font-weight: 600;
+}
+
+.heading-xl {
+  font-size: clamp(2.1rem, 1.7rem + 1.4vw, 3.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+}
+
+.heading-lg {
+  font-size: clamp(1.75rem, 1.5rem + 0.9vw, 2.75rem);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.heading-md {
+  font-size: clamp(1.5rem, 1.32rem + 0.6vw, 2.15rem);
+  line-height: 1.18;
+  letter-spacing: -0.02em;
+  font-weight: 600;
+}
+
+.copy-xl {
+  font-size: clamp(1.25rem, 1.13rem + 0.5vw, 1.6rem);
+  line-height: 1.55;
+}
+
+.copy-lg {
+  font-size: clamp(1.1rem, 1.02rem + 0.3vw, 1.3rem);
+  line-height: 1.6;
+}
+
+.copy-md {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.label-sm {
+  font-size: 0.75rem;
+  letter-spacing: 0.32em;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.eyebrow-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.55rem 1.1rem;
+  border-radius: 9999px;
+  border: 1px solid rgba(var(--glow-rgb), 0.22);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: hsl(var(--foreground));
+  backdrop-filter: blur(14px);
+}
+
+.surface-card {
+  border-radius: 42px;
+  border: 1px solid rgba(var(--glow-rgb), 0.16);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(22px);
+  box-shadow: 0 40px 120px rgba(10, 16, 36, 0.2);
+}
